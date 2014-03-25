@@ -46,4 +46,4 @@ Known bugs
 This readme is longer than the code.
 
 
-[ched]: github.com/rudymatela/evenmoreutils
+[ched]: https://github.com/rudymatela/evenmoreutils

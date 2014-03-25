@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# Simple script to check the next bus arriving in the city of york.
+#
+# Just run it to get the next bus time.  Pass -v for a list of next buses.
+#
+#
+# The script uses the default URL from the bus stop QR codes:
+#   http://deps.at/?32903631
+#
+# Other possibilities:
+#   http://www.rslpublic.co.uk/mobiledepboard/ShareEnabledDefaultD.aspx?id=32903631&cid=568&RTI=True
+#   http://nextbuses.mobi/WebView/BusStopSearch/BusStopSearchResults/32903631
+
+BUSSTOP=32903631
+
+nextbuses() {
+	links -dump "http://deps.at/?$BUSSTOP" |
+		grep -B 1 -A 100 "Departures for:" |
+		grep -B 100 "+--------" |
+		sed -e "s/^ *//" |
+		grep -v -- "-----" |
+		grep -v "^$" |
+		sed -e "s/^| *//" |
+		sed -e "s/ *|$//" |
+		sed -e "s/                    //"
+}
+
+nextbus() {
+	nextbuses |
+		grep 44 |
+		head -1 |
+		sed -e "s/.*  //"
+}
+
+if [ "$1" = "-v" ]
+then
+	nextbuses
+else
+	nextbus
+fi
+

@@ -1,14 +1,14 @@
 York nextbus
 ============
 
-`nextbus` is a simple command line script to check the next arriving bus on
-York, UK.  It uses live information grabbed from [this
+`nextbus` is a simple command line script to check the arrival time of next bus
+on York, UK.  It uses live information grabbed from [this
 webpage](http://deps.at/?32903631).  Works like this:
 
 	$ nextbus
 	3 min
 
-For the next buses, pass the verbose flag `-v`:
+For a list of arrivals, pass the verbose flag `-v`:
 
 	$ nextbus -v
 	Theatre Film & Television [QR/NFC]                    
@@ -19,11 +19,9 @@ For the next buses, pass the verbose flag `-v`:
 	44       York Rail Station            opp   16:54
 	44       York Rail Station            opp   17:12
 
-To configure which bus stop you want, edit the source with the bus stop code.
-The default is `32903631`: Theatre Film & Television, opposite side, bound to
-the city center:
-
-	BUSSTOP=<code>
+To configure which bus stop you want, edit the line containing `BUSSTOP=<code>`
+with the desired bus stop code.  The default is `32903631`: Theatre Film &
+Television, opposite side, bound to the city center.
 
 To know the code of your bus stop, just scan the QR code located there.
 

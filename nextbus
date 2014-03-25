@@ -28,8 +28,8 @@ nextbuses() {
 
 nextbus() {
 	nextbuses |
-		grep 44 |
-		head -1 |
+		head -4 |
+		tail -1 |
 		sed -e "s/.*  //"
 }
 

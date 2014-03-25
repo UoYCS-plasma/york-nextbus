@@ -33,7 +33,7 @@ nextbus() {
 		sed -e "s/.*  //"
 }
 
-if [ "$1" = "-v" ]
+if [ "$1" = "-v" ] || [ "`basename $0`" == "nextbuses" ]
 then
 	nextbuses
 else

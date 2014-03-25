@@ -32,9 +32,18 @@ Notice
 When using the script inside a widget or by your window manager, try to *call
 it in intervals larger than a minute* so you *don't overload* the server.
 
+You can use [ched] tool to make subsequent calls to nextbus cached:
+
+    ched -t 60 nextbus
+
+By running line above you'll never exceed a request per minute on the server.
+
+
 
 Known bugs
 ----------
 
 This readme is longer than the code.
 
+
+[ched]: github.com/rudymatela/evenmoreutils

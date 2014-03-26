@@ -26,6 +26,14 @@ Television, opposite side, bound to the city center.
 To know the code of your bus stop, just scan the QR code located there.
 
 
+Dependencies
+------------
+
+* bash, grep and sed, which probably you have installed;
+* [links], a text WWW browser.
+	Install with `apt-get install links` or `pacman -S links`.
+
+
 Notice
 ------
 
@@ -47,3 +55,4 @@ This readme is longer than the code.
 
 
 [ched]: https://github.com/rudymatela/evenmoreutils
+[links]: http://links.twibright.com

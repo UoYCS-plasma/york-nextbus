@@ -11,17 +11,17 @@ webpage](http://deps.at/?32903631).  Works like this:
 For a list of arrivals, pass the verbose flag `-v`:
 
 	$ nextbus -v
-	Theatre Film & Television [QR/NFC]                    
-	Departures for: 25 Mar 2014 at 16:21                  
+	Theatre Film & Television [QR/NFC]
+	Departures for: 25 Sep 2015 at 14:43
 	Service  Destination                  Stop  Time
-	44       York Rail Station            opp   3 min
-	44       York Rail Station            opp   18 min
-	44       York Rail Station            opp   16:54
-	44       York Rail Station            opp   17:12
+	66       City Ctr & Rail Stn          opp   14:56
+	66       City Ctr & Rail Stn          opp   25 min
+	66       City Ctr & Rail Stn          opp   15:26
+	66       City Ctr & Rail Stn          opp   55 min
 
 To configure which bus stop you want, edit the line containing `BUSSTOP=<code>`
-with the desired bus stop code.  The default is `32903631`: Theatre Film &
-Television, opposite side, bound to the city center.
+with the desired bus stop code.  The default is `32903631`: University of York,
+Theatre Film & Television, opposite side, bound to the city center.
 
 To know the code of your bus stop, just scan the QR code located there.
 
